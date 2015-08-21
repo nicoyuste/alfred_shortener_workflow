@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>nicoyuste.urlshorter</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>45A4AB07-1086-4B2D-BC90-41A64BAC128A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4EA61B9D-6C92-4166-9537-D74EB04D0A44</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>4EA61B9D-6C92-4166-9537-D74EB04D0A44</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4F3ECDC4-B5C4-4C14-AAB3-07ECBE56EC92</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>C9394E40-CD55-4DA2-9615-2060C47BA01A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Nicolas Yuste</string>
+	<key>description</key>
+	<string>Shorten url with goo.gl, the Google URL shortener.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>URL Shortener</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>4F3ECDC4-B5C4-4C14-AAB3-07ECBE56EC92</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query="{query}"
+python short_url.py {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4EA61B9D-6C92-4166-9537-D74EB04D0A44</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>sh</string>
+				<key>subtext</key>
+				<string>It shorts an URL using Google URL Shortener API</string>
+				<key>text</key>
+				<string>Shorten URL</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>45A4AB07-1086-4B2D-BC90-41A64BAC128A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Shortered URL pasted to Clipboard</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>C9394E40-CD55-4DA2-9615-2060C47BA01A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Use this workflow to short any URL using the Google Shortener tool. You just need to type:
+
+sh URL_TO_SHORT
+
+Created by Nicolas Yuste
+www.github.com/nicoyuste/shortener_workflow</string>
+	<key>uidata</key>
+	<dict>
+		<key>45A4AB07-1086-4B2D-BC90-41A64BAC128A</key>
+		<dict>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
+		<key>4EA61B9D-6C92-4166-9537-D74EB04D0A44</key>
+		<dict>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
+		<key>4F3ECDC4-B5C4-4C14-AAB3-07ECBE56EC92</key>
+		<dict>
+			<key>ypos</key>
+			<real>50</real>
+		</dict>
+		<key>C9394E40-CD55-4DA2-9615-2060C47BA01A</key>
+		<dict>
+			<key>ypos</key>
+			<real>360</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>www.nicoyuste.es</string>
+</dict>
+</plist>
