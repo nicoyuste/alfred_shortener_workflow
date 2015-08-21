@@ -1,6 +1,15 @@
 ## Alfred shortener Workflow
 Use this Alfred workflow to short any URL using the Google Shortener tool.
 
+
+###How to use it
+
+Just type <code>sh</code> and the URL that you want to short. Press enter and the shorted URL will be copied into your clipboard.
+
+<div align="center">
+	<img src="https://raw.githubusercontent.com/nicoyuste/alfred_shortener_workflow/master/workflow_preview.png">
+</div>
+
 ##License
 The MIT License (MIT)
 
